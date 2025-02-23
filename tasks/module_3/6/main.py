@@ -58,3 +58,29 @@ def date_range(start_date, end_date):
 
 print(date_range('2025-02-01', '2025-02-23'))
 print(date_range('2025-02-41', '2025-02-23'))
+
+
+"""
+Условие задачи
+
+Напишите функцию, которая будет возвращать акроним по переданной в неё строке со словами.
+
+Примеры работы программы:
+some_words = 'Информационные технологии’
+Результат: ИТ
+
+some_words = 'Near Field Communication’
+Результат: NFC
+
+Впишите своё решение вместо «…».
+
+Важно: не удаляйте код ниже, а дополните его. Функция необходима для проверки вашего решения. Функция принимает и возвращает строку.
+"""
+
+import re
+
+def acronym(some_words):
+   return ''.join(some_words[0].upper() if some_words else '' for some_words in some_words.split())
+
+print(acronym('Информационные технологии'))
+print(acronym('Near Field Communication'))
